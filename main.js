@@ -1,32 +1,12 @@
-// Definir variables
-/* 
-
-1. ingrese su nombre para que luego te de un msj de bienvenida
-
-
-
-2. desea realizar una reserva? Si/no
-(si es que no, msj gracias por visitarnos)
-si la opción es si un listado a continuación
-
-3. Hostel con el precio 5000, habitación privada con el precio 8000 y cabaña con el precio 15000. Para que lo pueda ver
-
-4. A continuación elegir una de esas 3 opciones (si se escribe algo que no está, opción incorrecta y vuelve a preguntar)
-5. Una vez elegida la opción una pregunta cuantos días quiere reservar
-5. Y luego el final que diga el total a pagar y listo (precio * cantidad de dias)
-
-*/
-
 // Definición de variables
 let nombre = "";
 let opciones = "";
 let precio = 0;
 let dias;
 
-
 // Definición de funciones
 
-function calcular(precio,dias) {
+function calcular(precio, dias) {
     return precio * dias;
 }
 
@@ -63,9 +43,6 @@ if (reserva.toLowerCase() == "si") {
         }
     } while (opciones != "1" && opciones != "2" && opciones != "3");
 
-    // Cuando agrego todo lo de abajo hay algo que esta mal porque no toma nada,
-    // Si borro lo de abajo, anda y llega hasta Elija una opcion
-
     switch (opciones) {
         case "1": precio = 5000; break;
         case "2": precio = 8000; break;
@@ -80,7 +57,7 @@ if (reserva.toLowerCase() == "si") {
         }
     } while (dias == null || isNaN(dias));
 
-    alert(`El total a pagar es $${calcular(precio,dias)}\n\nMuchas gracias por su visita!`);
+    alert(`El total a pagar es $${calcular(precio, dias)}\n\nMuchas gracias por su visita!`);
 
 }
 
